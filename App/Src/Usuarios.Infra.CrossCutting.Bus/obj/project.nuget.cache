@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "w8S6XVtEzY8hzBBDeEcAc3R3i84gBML0n+XSt+x6WYvr4dSn3FlHqu7YYXxQGThLW9t+r98Uy2y6xro0ecBBrA==",
+  "success": true,
+  "projectFilePath": "C:\\git-anibaliym\\Desarrollo_UsuariosAPI\\App\\Src\\Usuarios.Infra.CrossCutting.Bus\\Usuarios.Infra.CrossCutting.Bus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Anibal Yañez\\.nuget\\packages\\ardalis.smartenum\\7.0.0\\ardalis.smartenum.7.0.0.nupkg.sha512",
+    "C:\\Users\\Anibal Yañez\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\Anibal Yañez\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\Anibal Yañez\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Anibal Yañez\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
