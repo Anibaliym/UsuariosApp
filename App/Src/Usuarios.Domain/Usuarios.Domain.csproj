@@ -15,4 +15,18 @@
     <ProjectReference Include="..\Usuarios.Infra.CrossCutting.Bus\Usuarios.Infra.CrossCutting.Bus.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Commands\Log\Validations\" />
+    <Folder Include="Commands\Log\Handlers\" />
+    <Folder Include="Commands\Log\Commands\" />
+    <Folder Include="Commands\Seguridad\Commands\" />
+    <Folder Include="Commands\Seguridad\Handlers\" />
+    <Folder Include="Commands\Seguridad\Validations\" />
+    <Folder Include="Enumerations\Log\" />
+    <Folder Include="Events\Log\Events\" />
+    <Folder Include="Events\Log\Handlers\" />
+    <Folder Include="Events\Seguridad\Events\" />
+    <Folder Include="Events\Seguridad\Handlers\" />
+  </ItemGroup>
+
 </Project>
