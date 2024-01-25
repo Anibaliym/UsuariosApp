@@ -11,7 +11,13 @@ namespace Usuarios.Domain.Commands.Usuario.Handlers
         {
             if (!message.IsValid()) return message.CommandResponse;
 
-            var usuario = new Entities.Usuario(message.Id, message.IdPersona, message.Nick, message.Tipo, message.Estado);
+            var usuario = new Entities.Usuario(
+                message.Id, 
+                message.IdPersona, 
+                message.Nick.ToUpper(), 
+                message.Tipo.ToUpper(), 
+                message.Estado.ToUpper()
+            );
 
             var existeUsuario = await _usuarioRepository.BuscaPorId(message.Id);
 
