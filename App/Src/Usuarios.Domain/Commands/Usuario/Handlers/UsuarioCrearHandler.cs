@@ -34,6 +34,9 @@ namespace Usuarios.Domain.Commands.Usuario.Handlers
                 return CommandResponse;
             }
 
+
+            
+
             usuario.AddDomainEvent(new UsuarioCrearEvent(
                 usuario.Id,
                 message.IdPersona, 

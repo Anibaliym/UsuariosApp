@@ -29,7 +29,7 @@ namespace Usuarios.Domain.Commands.Usuario
         {
             RuleFor(item => item.Tipo)
                 .NotEmpty().WithMessage("Por favor asegurese que el 'Tipo' no este vacio")
-                .Must(CommonValidator.ValidadorDeEnumeraciones<TipoEnum>).WithMessage("El 'Tipo' debe estar entre los valores permitidos ('USUARIO','ESTANDAR').");
+                .Must(CommonValidator.ValidadorDeEnumeraciones<TipoEnum>).WithMessage("El 'Tipo' debe estar entre los valores permitidos ('USUARIO','ADMINISTRADOR').");
         }
 
         protected void ValidaEstado()
