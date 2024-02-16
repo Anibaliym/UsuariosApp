@@ -24,6 +24,7 @@ namespace Usuarios.Infra.Data.PostgreSQL.Context
 
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Seguridad> Seguridad { get; set; }
+        public DbSet<Log> Log { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +35,7 @@ namespace Usuarios.Infra.Data.PostgreSQL.Context
 
             modelBuilder.ApplyConfiguration(new UsuarioMap());
             modelBuilder.ApplyConfiguration(new SeguridadMap());
+            modelBuilder.ApplyConfiguration(new LogMap());
 
             base.OnModelCreating(modelBuilder);
         }

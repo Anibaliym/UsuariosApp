@@ -2,6 +2,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Usuarios.Application.Interfaces;
 using Usuarios.Application.Services;
+using Usuarios.Domain.Commands.Log.Commands;
+using Usuarios.Domain.Commands.Log.Handlers;
 using Usuarios.Domain.Commands.Seguridad.Commands;
 using Usuarios.Domain.Commands.Seguridad.Handlers;
 using Usuarios.Domain.Commands.Usuario.Commands;
@@ -9,6 +11,8 @@ using Usuarios.Domain.Commands.Usuario.Handlers;
 using Usuarios.Domain.Core.Events;
 using Usuarios.Domain.Core.Mediator;
 using Usuarios.Domain.Core.Messaging;
+using Usuarios.Domain.Events.Log.Events;
+using Usuarios.Domain.Events.Log.Handlers;
 using Usuarios.Domain.Events.Seguridad.Events;
 using Usuarios.Domain.Events.Seguridad.Handlers;
 using Usuarios.Domain.Events.Usuario.Events;
@@ -33,6 +37,7 @@ namespace Usuarios.Infra.CrossCutting.IoC
             //Application
             services.AddScoped<IUsuarioAppService, UsuarioAppService>();
             services.AddScoped<ISeguridadAppService, SeguridadAppService>();
+            services.AddScoped<ILogAppService, LogAppService>();
 
             //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             //Domain Events
@@ -44,6 +49,7 @@ namespace Usuarios.Infra.CrossCutting.IoC
             services.AddScoped<INotificationHandler<SeguridadCrearEvent>, SeguridadCrearEventHandler>();
             services.AddScoped<INotificationHandler<SeguridadModificarEvent>, SeguridadModificarEventHandler>();
 
+            services.AddScoped<INotificationHandler<LogCrearEvent>, LogCrearEventHandler>();
 
             //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             //Domain Commands
@@ -52,15 +58,16 @@ namespace Usuarios.Infra.CrossCutting.IoC
             services.AddScoped<IRequestHandler<UsuarioModificarCommand, CommandResponse>, UsuarioCommandHandler>();
             services.AddScoped<IRequestHandler<UsuarioEliminarCommand, CommandResponse>, UsuarioCommandHandler>();
 
-
             services.AddScoped<IRequestHandler<SeguridadCrearCommand, CommandResponse>, SeguridadCommandHandler>();
             services.AddScoped<IRequestHandler<SeguridadModificarCommand, CommandResponse>, SeguridadCommandHandler>();
 
+            services.AddScoped<IRequestHandler<LogCrearCommand, CommandResponse>, LogCommandHandler>();
 
             //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             //InfraData
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<ISeguridadRepository, SeguridadRepository>();
+            services.AddScoped<ILogRepository, LogRepository>();
 
             services.AddScoped<UsuariosContext>();
 

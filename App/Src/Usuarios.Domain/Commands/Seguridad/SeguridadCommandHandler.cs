@@ -12,5 +12,4 @@ namespace Usuarios.Domain.Commands.Seguridad.Handlers
             _seguridadRepository = seguridadRepository ?? throw new ArgumentNullException(nameof(seguridadRepository));
         }
     }
-
 }

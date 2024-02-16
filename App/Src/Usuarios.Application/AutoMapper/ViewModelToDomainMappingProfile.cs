@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using Usuarios.Application.ViewModels.Log;
 using Usuarios.Application.ViewModels.Seguridad;
 using Usuarios.Application.ViewModels.Usuario;
+using Usuarios.Domain.Commands.Log.Commands;
 using Usuarios.Domain.Commands.Seguridad.Commands;
 using Usuarios.Domain.Commands.Usuario.Commands;
 
@@ -46,6 +48,11 @@ namespace Usuarios.Application.AutoMapper
             #endregion
 
             #region Log
+
+            CreateMap<LogCrearViewModel, LogCrearCommand>().ConstructUsing(item => new LogCrearCommand(
+                item.IdUsuario, item.Accion, item.Observacion
+            ));
+
             #endregion
         }
     }

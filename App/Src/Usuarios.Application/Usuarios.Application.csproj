@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <Folder Include="EventSourcedNormalizers\Log\" />
-    <Folder Include="ViewModels\Log\" />
     <Folder Include="ViewModels\ServiciosDeDominio\" />
   </ItemGroup>
 
