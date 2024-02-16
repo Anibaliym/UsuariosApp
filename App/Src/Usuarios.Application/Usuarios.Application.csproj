@@ -17,10 +17,7 @@
 
   <ItemGroup>
     <Folder Include="EventSourcedNormalizers\Log\" />
-    <Folder Include="EventSourcedNormalizers\Seguridad\" />
-    <Folder Include="ViewModels\Log\" />
     <Folder Include="ViewModels\ServiciosDeDominio\" />
-    <Folder Include="ViewModels\Seguridad\" />
   </ItemGroup>
 
 </Project>

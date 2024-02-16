@@ -47,7 +47,7 @@ namespace Usuarios.Infra.Data.PostgreSQL.Repository
 
         public async Task<Usuario> BuscaPorNick(string nick)
         {
-            return await DbSet.AsNoTracking().Where(item => item.Nick == nick).FirstOrDefaultAsync();
+            return await DbSet.AsNoTracking().Where(item => item.Nick == nick.ToUpper()).FirstOrDefaultAsync();
         }
 
         public async Task<IList<Usuario>> ObtieneUsuariosEstadoActivo()

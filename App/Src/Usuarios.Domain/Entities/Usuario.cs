@@ -15,7 +15,6 @@ namespace Usuarios.Domain.Entities
 
         protected Usuario() { }
 
-        public Guid Id { get; set; }
         public Guid IdPersona { get; set; }
         public string Nick { get; set; } = string.Empty;
         public string Tipo { get; set; } = string.Empty;

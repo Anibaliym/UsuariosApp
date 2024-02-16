@@ -23,6 +23,8 @@ namespace Usuarios.Infra.Data.PostgreSQL.Context
         }
 
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Seguridad> Seguridad { get; set; }
+        public DbSet<Log> Log { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,6 +34,8 @@ namespace Usuarios.Infra.Data.PostgreSQL.Context
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetProperties().Where(p => p.ClrType == typeof(string)))) property.SetColumnType("varchar(100)");
 
             modelBuilder.ApplyConfiguration(new UsuarioMap());
+            modelBuilder.ApplyConfiguration(new SeguridadMap());
+            modelBuilder.ApplyConfiguration(new LogMap());
 
             base.OnModelCreating(modelBuilder);
         }

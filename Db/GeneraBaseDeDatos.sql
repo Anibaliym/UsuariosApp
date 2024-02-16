@@ -20,12 +20,13 @@ create table if not exists public."Usuario"
     constraint usuario_pk primary key ("Id")
 ); 
 
+
 create table if not exists public."Seguridad"
 (
     "Id" uuid not null,
     "IdUsuario" uuid not null,
     "Contrasena" varchar(50) not null, 
-    "intentos" integer not null, 
+    "Intentos" integer not null, 
     "FechaCreacion" timestamp not null, 
     constraint seguridad_pk primary key ("Id")
 ); 
